@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="Pinga">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHPinga</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <meta content="PHPinga" property="og:site_name">
+    <meta content="PHPinga" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="Um jogo de perguntas relacionadas a PHP. Quem errar, bebe." property="og:description">
+    <meta name="description" content="Um jogo de perguntas relacionadas a PHP. Quem errar, bebe." />
+    <meta content="http://php-pb.net/PHPinga/" property="og:url">
+    <meta content="http://php-pb.net/PHPinga/phpinga.png" property="og:image">
+  </head>
+  <body>
+    <a class="hidden-xs hidden-sm" href="https://github.com/php-pb/PHPinga">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+    <div class="container">
+
+      <div class="app col-md-6 col-md-offset-3" ng-controller="MainController">
+
+          <div class="welcome" ng-show="state == 'welcome'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">PHPinga</h1>
+            <p class="text-center">
+              Cada um na mesa deve responder a uma pergunta sobre PHP.
+              Caso acerte, pode escolher uma pessoa pra beber, caso erre tem de beber.
+              Ao terminar, passa-se para o jogador da esquerda.
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="letTheGameBegin()" class="center-block btn btn-lg btn-primary">Começar</button>
+          </div>
+
+          <div class="end" ng-show="state == 'end'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">O jogo acabou!</h1>
+            <p class="text-center">
+              Não está bêbado suficiente? Clice em "Começar de novo"!
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="letTheGameBegin()" class="center-block btn btn-lg btn-primary">Começar de novo</button>
+          </div>
+
+          <div class="wrong" ng-show="state == 'wrong'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">Bebe!</h1>
+            <p class="text-center">
+              Você errou! Agora tem de beber e passar a vez pra a pessoa à sua esquerda.
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="proximo()" class="center-block btn btn-lg btn-primary">Próximo</button>
+          </div>
+
+          <div class="correct" ng-show="state == 'correct'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">Certa a resposta!</h1>
+            <p class="text-center">
+              Você acertou! Escolha alguém pra beber e passe a vez pra a pessoa à sua esquerda.
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="proximo()" class="center-block btn btn-lg btn-primary">Próximo</button>
+          </div>
+
+          <div class="pergunta" ng-show="state=='questions'">
+            <h4 style="padding-top:20px; padding-bottom:20px" ng-bind-html="perguntas[[contador]].pergunta | to_trusted"></h4>
+            <div class="radio" ng-repeat="alternativa in perguntas[[contador]].alternativas track by $index">
+              <label><input value="{{$index}}" type="radio" name="question{{contador}}">
+                <span ng-bind-html="alternativa.texto | to_trusted"></span>
+              </label>
+            </div>
+            <h2>Tempo restante: {{time}}</h2>
+            <button style="width:100%; margin-top:50px" ng-click="responder()" class="center-block btn btn-lg btn-primary">Enviar</button>
+          </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-sanitize.js"></script>
+    <script src="assets/markdown.min.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68824214-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
