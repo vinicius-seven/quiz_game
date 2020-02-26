@@ -3,6 +3,7 @@
     --body_gradient_left: rgb(13, 120, 219);
     --form_bg: #ffffff;
     --pergunta_bg:  #af3636;
+    --pergunta_bg_hover: #19be03;
     --input_bg: #E5E5E5;
     --input_hover: #eaeaea;
     --submit_bg: #1FCC44;
@@ -46,11 +47,12 @@ body {
 
 #pergunta {
     width: 90%;
-    height: 30%;
+    height: auto;
     /* this will help us center it*/
     margin: auto;
+    margin-bottom: 20px;
     background-color: var(--pergunta_bg);
-    border-radius: 50px;
+    border-radius: 30px;
     /* make it a grid container*/
     display: grid;
     /* with two columns of same width*/
@@ -58,11 +60,11 @@ body {
     /* with a small gap in between them*/
     grid-gap: 5vw;
     /* add some padding around */
-    padding: 5vh 15px;
+    padding: 10px 10px;
 
-    text-align: center;
+    text-align: justify;
     font-family: roboto,sans-serif;
-    font-size: 1;
+    font-size: 1.25rem;
     color: #ffffff;
 }
 
@@ -73,7 +75,7 @@ body {
     margin: auto;
     margin-top: 10px;
     background-color: var(--pergunta_bg);
-    border-radius: 50px;
+    border-radius: 20px;
     /* make it a grid container*/
     display: grid;
     /* with two columns of same width*/
@@ -81,5 +83,18 @@ body {
     /* with a small gap in between them*/
     grid-gap: 5vw;
     /* add some padding around */
-    padding: 5vh 15px;
+    padding: 10px 10px;
+
+    /* text-align: center; */
+    font-family: roboto,sans-serif;
+    font-size: 1.50rem;
 }
+
+#alternativa:hover {
+background-color: var(--pergunta_bg_hover);
+}
+
+a:link { 
+    text-decoration:none; 
+    color: #ffffff;
+} 

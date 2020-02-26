@@ -18,11 +18,31 @@
         <div id="pergunta">
             Apesar da diversidade de modais utilizados para a distribuição de mercadorias no Brasil, ocorre a predominância do tipo rodoviário. Dentre as vantagens do modal rodoviário, assinale a opção correta.
         </div>
-        <div id="alternativa"></div>
-        <div id="alternativa"></div>
-        <div id="alternativa"></div>
-        <div id="alternativa"></div>
-        <div id="alternativa"></div>
+        <div id="alternativa">
+            <a href="#" >    
+                A) Exige uma infraestrutura uniforme.
+            </a>
+        </div>
+        <div id="alternativa">
+            <a href="#" >
+                B) Opera com custo econômico elevado.
+            </a>
+        </div>
+        <div id="alternativa">
+            <a href="#" >
+                C) Mostra agilidade na entrega.
+            </a>
+        </div>
+        <div id="alternativa">
+            <a href="#" >
+                D) Utiliza veículos não poluidores.
+            </a>
+        </div>
+        <div id="alternativa">
+            <a href="#" >
+                E) Oferece amplo limite de carregamento.
+            </a>
+        </div>
     </div>
 </div>
 
