@@ -15,7 +15,7 @@
 <body>
     <div id="form_wrapper">
         <div id="form_left">
-            <img src="icon.png" alt="computer icon">
+            <img src="logo/icon.png" alt="computer icon">
         </div>
         <div id="form_right">
             <h1>Logistica do milhão</h1>
