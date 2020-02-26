@@ -1,0 +1,44 @@
+:root {
+    --body_gradient_right: rgb(84, 203, 207);
+    --body_gradient_left: rgb(13, 120, 219);
+    --form_bg: #ffffff;
+    --input_bg: #E5E5E5;
+    --input_hover: #eaeaea;
+    --submit_bg: #1FCC44;
+    --submit_hover: #40e263;
+    --icon_color: #6b6b6b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* make the body full height*/
+    height: 100vh;
+    /* set our custom font */
+    font-family: 'Roboto',
+        sans-serif;
+    /* create a linear gradient*/
+    background-image: linear-gradient(to right, var(--body_gradient_left), var(--body_gradient_right));
+    display: flex;
+}
+
+#form_wrapper {
+    width: 90%;
+    height: 90%;
+    /* this will help us center it*/
+    margin: auto;
+    background-color: var(--form_bg);
+    border-radius: 50px;
+    /* make it a grid container*/
+    display: grid;
+    /* with two columns of same width*/
+    grid-template-columns: 1fr 1fr;
+    /* with a small gap in between them*/
+    grid-gap: 5vw;
+    /* add some padding around */
+    padding: 5vh 15px;
+}
