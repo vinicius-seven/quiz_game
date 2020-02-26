@@ -2,6 +2,7 @@
     --body_gradient_right: rgb(84, 203, 207);
     --body_gradient_left: rgb(13, 120, 219);
     --form_bg: #ffffff;
+    --pergunta_bg:  #af3636;
     --input_bg: #E5E5E5;
     --input_hover: #eaeaea;
     --submit_bg: #1FCC44;
@@ -37,6 +38,46 @@ body {
     display: grid;
     /* with two columns of same width*/
     grid-template-columns: 1fr 1fr;
+    /* with a small gap in between them*/
+    grid-gap: 0vw;
+    /* add some padding around */
+    padding: 5vh 15px;
+}
+
+#pergunta {
+    width: 90%;
+    height: 30%;
+    /* this will help us center it*/
+    margin: auto;
+    background-color: var(--pergunta_bg);
+    border-radius: 50px;
+    /* make it a grid container*/
+    display: grid;
+    /* with two columns of same width*/
+    grid-template-columns: 1fr;
+    /* with a small gap in between them*/
+    grid-gap: 5vw;
+    /* add some padding around */
+    padding: 5vh 15px;
+
+    text-align: center;
+    font-family: roboto,sans-serif;
+    font-size: 1;
+    color: #ffffff;
+}
+
+#alternativa {
+    width: 90%;
+    height: 10%;
+    /* this will help us center it*/
+    margin: auto;
+    margin-top: 10px;
+    background-color: var(--pergunta_bg);
+    border-radius: 50px;
+    /* make it a grid container*/
+    display: grid;
+    /* with two columns of same width*/
+    grid-template-columns: 1fr;
     /* with a small gap in between them*/
     grid-gap: 5vw;
     /* add some padding around */

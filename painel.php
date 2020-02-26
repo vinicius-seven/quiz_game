@@ -14,7 +14,20 @@
 
 <body>
 <div id="form_wrapper">
+    <div id="perguntas">
+        <div id="pergunta">
+            Apesar da diversidade de modais utilizados para a distribuição de mercadorias no Brasil, ocorre a predominância do tipo rodoviário. Dentre as vantagens do modal rodoviário, assinale a opção correta.
+        </div>
+        <div id="alternativa"></div>
+        <div id="alternativa"></div>
+        <div id="alternativa"></div>
+        <div id="alternativa"></div>
+        <div id="alternativa"></div>
+    </div>
 </div>
+
+
+
 </body>
 
 </html>
