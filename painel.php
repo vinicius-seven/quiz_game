@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Logistica do milhão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!-- 
 15 perguntas
 3 níveis
 3 chances de perguntar para as cartas
@@ -19,4 +39,4 @@ A.Exige uma infraestrutura uniforme.
 B.Opera com custo econômico elevado.
 C.Mostra agilidade na entrega.
 D.Utiliza veículos não poluidores.
-E.Oferece amplo limite de carregamento.
+E.Oferece amplo limite de carregamento. -->
