@@ -4,6 +4,7 @@
     --form_bg: #ffffff;
     --pergunta_bg:  #af3636;
     --pergunta_bg_hover: #19be03;
+    --premeios_bg: #bbbe04;
     --input_bg: #E5E5E5;
     --input_hover: #eaeaea;
     --submit_bg: #1FCC44;
@@ -34,7 +35,7 @@ body {
     /* this will help us center it*/
     margin: auto;
     background-color: var(--form_bg);
-    border-radius: 50px;
+    border-radius: 5px;
     /* make it a grid container*/
     display: grid;
     /* with two columns of same width*/
@@ -52,7 +53,7 @@ body {
     margin: auto;
     margin-bottom: 20px;
     background-color: var(--pergunta_bg);
-    border-radius: 30px;
+    border-radius: 5px;
     /* make it a grid container*/
     display: grid;
     /* with two columns of same width*/
@@ -75,7 +76,7 @@ body {
     margin: auto;
     margin-top: 10px;
     background-color: var(--pergunta_bg);
-    border-radius: 20px;
+    border-radius: 5px;
     /* make it a grid container*/
     display: grid;
     /* with two columns of same width*/
@@ -92,6 +93,26 @@ body {
 
 #alternativa:hover {
 background-color: var(--pergunta_bg_hover);
+}
+
+#premios {
+    width: 90%;
+    height: 10%;
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-gap: 5vw;
+}
+#premios_acertar,#premios_parar,#premios_errar {
+    width: 100%;
+    height: 100%;
+    
+    background-color: var(--premeios_bg);
+    border-radius: 5px;
+
+    font-family: roboto,sans-serif;
+    font-size: 1.50rem;
 }
 
 a:link { 

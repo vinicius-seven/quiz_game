@@ -38,10 +38,11 @@
                 D) Utiliza veículos não poluidores.
             </a>
         </div>
-        <div id="alternativa">
-            <a href="#" >
-                E) Oferece amplo limite de carregamento.
-            </a>
+
+        <div id="premios">
+            <div id="premios_acertar"></div>
+            <div id="premios_para"></div>
+            <div id="premios_errar"></div>
         </div>
     </div>
 </div>
